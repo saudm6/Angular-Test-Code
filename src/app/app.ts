@@ -1,20 +1,13 @@
 import { Component } from '@angular/core';
-import { Dialog } from 'primeng/dialog';
-import { ButtonModule } from 'primeng/button';
-import { InputTextModule } from 'primeng/inputtext';
-
-
+import { RouterOutlet } from '@angular/router';
+import { HeaderComponent } from '../layout/header.component/header.component';
 
 @Component({
   selector: 'app-root',
-  imports: [Dialog, ButtonModule, InputTextModule],
+  imports: [RouterOutlet, HeaderComponent],
   templateUrl: './app.html',
   styleUrl: './app.css',
   standalone: true,
 })
 export class App {
-  visible: boolean = false;
-  showDialog() {
-      this.visible = true;
-  }
 }
